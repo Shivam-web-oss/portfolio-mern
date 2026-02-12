@@ -7,9 +7,7 @@ import contactRoutes from './routes/contactRoutes.js';
 import portfolioRoutes from './routes/portfolioRoutes.js';
 
 dotenv.config();
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
+
 
 
 const app = express();
