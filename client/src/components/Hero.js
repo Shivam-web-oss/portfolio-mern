@@ -9,6 +9,7 @@ const Hero = () => {
   useEffect(() => {
     let charIndex = 0;
     let interval;
+    let wordIndex = 0;
 
     const type = () => {
       if (charIndex < words[wordIndex].length) {

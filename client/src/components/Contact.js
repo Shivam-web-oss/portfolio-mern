@@ -27,6 +27,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post('/api/contact', formData);
+      const data = await response.json();
       setResponseMessage('Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
