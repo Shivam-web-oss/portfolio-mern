@@ -1,0 +1,117 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0f0f2e 100%);
+  transition: background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 234, 255, 0.05) 0%, transparent 70%);
+  animation: float 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, 30px); }
+}
+
+:root.dark-mode .hero {
+  background: #0a0f1c;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: slideInDown 1s ease;
+  position: relative;
+  z-index: 1;
+  color: #00eaff;
+  text-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+}
+
+.hero h1 span {
+  color: #78aaff;
+  text-shadow: 0 0 15px rgba(120, 170, 255, 0.6);
+  font-weight: 900;
+}
+
+:root.dark-mode .hero h1 span {
+  color: #78aaff;
+  text-shadow: 0 0 15px rgba(120, 170, 255, 0.6);
+}
+
+.hero .typing {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  min-height: 3rem;
+  color: #00eaff;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
+}
+
+:root.dark-mode .hero .typing {
+  color: #00eaff;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+}
+
+.hero .btn {
+  background: #00eaff;
+  color: #0a0f1c;
+  font-weight: 700;
+  padding: 12px 40px;
+  border-radius: 50px;
+  border: 2px solid #78aaff;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+:root.dark-mode .hero .btn {
+  background: #00eaff;
+  color: #0a0f1c;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.7);
+}
+
+.hero .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.8);
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .typing {
+    font-size: 1.2rem;
+  }
+}

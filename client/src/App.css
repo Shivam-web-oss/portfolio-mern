@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #00eaff;
+  --secondary-color: #78aaff;
+  --text-color: var(--text-primary);
+  --light-bg: var(--bg-secondary);
+  --white: var(--bg-primary);
+  --shadow: var(--shadow);
+}
+
+.App {
+  background: #0a0f1c;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+/* Dark mode background adjustment */
+:root.dark-mode .App {
+  background: #0a0f1c;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1b35;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00eaff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #78aaff;
+  box-shadow: 0 0 15px #78aaff;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #00eaff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.8);
+}

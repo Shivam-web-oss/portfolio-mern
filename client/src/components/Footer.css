@@ -1,0 +1,28 @@
+.footer {
+  background: #0a0f1c;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  transition: background 0.3s ease;
+  border-top: 1px solid #0d233b;
+  box-shadow: 0 -4px 10px rgba(0, 234, 255, 0.15);
+}
+
+:root.dark-mode .footer {
+  background: #0a0f1c;
+  color: #ffffff;
+  box-shadow: 0 -4px 10px rgba(0, 234, 255, 0.15);
+}
+
+.footer p {
+  margin: 0;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem;
+  }
+}
